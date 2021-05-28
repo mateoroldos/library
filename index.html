@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+    <div id="sidebar">
+        <h1>Online Library</h1>
+        <p id="presentation">This is an online library made as an excercise for the Odin Project Curriculum</p>
+        <button id="new-book-btn">Add New Book</button>
+    </div>
+
+    <div id="background">
+    <div id="cards"></div>
+    </div>
+
+    <div id="book-form-div" class="form-popup">
+        <form id="book-form" class="form-container">
+          <h2>Add Book</h2>
+      
+          <label for="title"><b>Title</b></label>
+          <input type="text" placeholder="Book Title" name="title" id="title" required>
+      
+          <label for="author"><b>Author</b></label>
+          <input type="text" placeholder="Book Author" name="author" id="author" required>
+
+          <label for="pages"><b>Pages</b></label>
+          <input type="text" placeholder="Number of Pages" name="pages" id="pages" required>
+
+          <div id="read-it-checkbox">
+            <label for="readit">Read It?</label>
+            <label for="yes"><b>Yes</b></label>
+            <input type="radio" name="readit" id="yes" value="yes" required>
+            <label for="no"><b>No</b></label>
+            <input type="radio" name="readit" id="no" value="no" required>
+          </div>
+
+          <div id="form-btn-div">
+            <button id="add-book-btn" type="submit" class="btn">Add Book</button>
+            <button type="reset" class="btn cancel" onclick="closeForm()">Close</button>
+          </div>
+          </form>
+      </div>
+    
+</body>
+
+<script src="library.js"></script>
+
+</html>

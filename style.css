@@ -1,0 +1,282 @@
+body {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    height: 100vh;
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+  color: #70D5A3;
+}
+
+p {
+  color: rgba(255, 255, 255, 0.623);
+}
+
+#presentation {
+  margin-bottom: 40px;
+}
+
+#new-book-btn {
+  background-color: #70D5A3;
+  padding: 12px 20px 12px 20px;
+  border: none;
+  border-radius: 16px;
+}
+
+#sidebar {
+  background-color: #191B1F;
+  padding: 2em 4em 2em 4em;
+  display: flex;
+  flex-direction: column;
+}
+
+#background {
+  background:linear-gradient(0deg, #191b1fb2, #191b1fa6), url(https://images.unsplash.com/photo-1568826069038-f3de1448e9a1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=577&q=80);
+  background-size:cover;
+}
+
+#cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: fit-content;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #191B1F;
+  flex-basis: 30%;
+  border-radius: 1em;
+  padding: 1.5em 1.5em 1.5em 1.5em;
+  margin: 2em 2em 2em 2em;
+  line-height: 20px;
+  height: auto;
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+}
+
+.card-first-div {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.card-second-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.book-title {
+  font-size: 26px;
+}
+
+.book-author {
+  color: rgb(255, 255, 255);
+}
+
+.book-pages {
+  color: rgba(255, 255, 255, 0.658);
+  margin-bottom: 30px;
+  font-size: 12px;
+}
+
+.read-it-div-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.delete-button {
+  padding: 0 0 0 0;
+  background-color: transparent;
+  border: none;
+  color: rgb(216, 108, 108);
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+/* NEW BOOK FORM STYLE */
+
+.read-it-text {
+  color: rgba(255, 255, 255, 0.589);
+  font-size: 12px;
+  margin-bottom: 0px;
+}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+  }
+  
+  /* The popup form - hidden by default */
+  .form-popup {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 9;
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+    max-width: 300px;
+    padding: 20px 4% 40px 4%;
+    background-color: #17241d;
+    border-radius: 12px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #70D5A3;
+    justify-content: center;
+    align-content: center;
+    left: calc(-50vw + 50%);
+    right: calc(-50vw + 50%);
+    margin-left: auto;
+    margin-right: auto;
+    top: calc(-50vh + 50%);
+    bottom: calc(-50vh + 50%);
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  
+  /* Full-width input fields */
+  .form-container input[type=text], .form-container input[type=password] {
+    width: 92%;
+    padding: 15px;
+    margin: 5px 0 18px 0;
+    border: none;
+    background: #ebebeb;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #ebebeb;
+    border-radius: 12px;
+  }
+  
+  /* When the inputs get focus, do something */
+  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-width: 2px;
+    border-color: #70D5A3;
+    outline: none;
+  }
+  
+  #form-btn-div {
+    display: flex;
+  }
+  /* Set a style for the submit/login button */
+  .form-container .btn {
+    background-color: #70D5A3;
+    color: rgb(0, 0, 0);
+    padding: 16px 20px;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    width: 70%;
+    margin-bottom:10px;
+    margin-right: 20px;
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    background-color: red;
+    color: white;
+    bottom: 0;
+    width: 30%;
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+
+  .form-container label {
+    color: rgba(255, 255, 255, 0.521);
+    font-size: 12px;
+  }
+
+  #read-it-checkbox {
+    margin-bottom: 30px;
+  }
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #278154;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
